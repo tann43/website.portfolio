@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <i class="fa-solid fa-bars hamburger" onclick="toggleMenu()"></i>
+        <ul class="nav-links">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#hobi">Hobi</a></li>
+            <li><a href="#makanan">Makanan Kesukaan</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <section id="beranda" class="profile">
+            <div class="profile-img">
+                <i class="fa-solid fa-user" style="font-size: 100px; color: #666;"></i>
+            </div>
+            <h1>Welcome to My Website</h1>
+            <div class="animated-text">
+                <p>Discover my hobbies, favorite foods!</p>
+            </div>
+        </section>
+
+        <section id="services">
+          <!-- Konten services -->
+      </section>
+
+        <section id="services">
+            <h2 style="text-align: center; margin: 20px 0;">Services</h2>
+            <div class="card-container">
+                <div class="card">Web Design</div>
+                <div class="card">Web Development</div>
+                <div class="card">Graphic Design</div>
+                <div class="card">SEO Optimization</div>
+            </div>
+        </section>
+
+        <section id="education">
+          <!-- Konten education -->
+      </section>
+
+        <section id="education">
+            <h2 style="text-align: center; margin: 20px 0;">Education</h2>
+            <div class="card-container">
+                <div class="card">Bachelor's Degree</div>
+                <div class="card">Master's Degree</div>
+                <div class="card">Doctoral Degree</div>
+                <div class="card">Online Courses</div>
+            </div>
+        </section>
+
+        <section id="hobi">
+          <!-- Konten hobi -->
+      </section>
+
+        <section id="hobi">
+            <h2 style="text-align: center; margin: 20px 0;">Hobi</h2>
+            <div class="card-container">
+                <div class="card">Membaca</div>
+                <div class="card">Menulis</div>
+                <div class="card">Olahraga</div>
+                <div class="card">Musik</div>
+            </div>
+        </section>
+
+        <section id="makanan-kesukaan">
+          <!-- Konten makanan kesukaan -->
+      </section>
+
+        <section id="makanan">
+            <h2 style="text-align: center; margin: 20px 0;">Makanan Kesukaan</h2>
+            <div class="card-container">
+                <div class="card">Nasi Goreng</div>
+                <div class="card">Sate</div>
+                <div class="card">Bakso</div>
+                <div class="card">Mie Goreng</div>
+            </div>
+        </section>
+
+        <section id="contact">
+          <!-- Konten contact -->
+      </section>
+
+        <section id="contact">
+            <h2 style="text-align: center; margin: 20px 0;">Contact</h2>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

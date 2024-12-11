@@ -1,0 +1,278 @@
+:root {
+    --primary-color: #2196F3;
+    --secondary-color: #1976D2;
+    --text-color: #ffff;
+    --background-color: #00ffff;
+    --card-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--cream-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background: var(--primary-color);
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hamburger {
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.profile {
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+}
+
+.animated-text {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-top: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--card-color);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--primary-color);
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+}
+
+.card.active {
+    background: #ffffff;
+    color: #00ffff;
+    transform: scale(1.05);
+}
+
+.card:not(.active) {
+    background: #00ffff;
+    color: #ffffff;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #00ffff;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(-#00ffff);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ceffff;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button {
+    background: var(#ceffff);
+    color: var(#ceffff);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 0 0 transparent;
+}
+
+button:hover {
+    background: var(#ceffff);
+    color: #ceffff;
+}
+
+button:active {
+    background: #ceffff;
+    color: white;
+    box-shadow: 0 0 10px rgba(225,225,225,0.5);
+}
+
+.footer {
+    background: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+.card {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .animated-text p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+  .toggle-menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .toggle-menu:hover {
+    transform: scale(1.1);
+  }
+  
+  .toggle-menu span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+  }
